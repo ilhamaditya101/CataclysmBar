@@ -1,18 +1,161 @@
-# World -> region name shown in the text overlay.
-worlds:
-  world: "Elyndor"
-# example_world: "name"
+# ============================================================
+# CatatclysmBar 1.0.1
+# Paper 1.20.1
+# ============================================================
 
-# Use your exact MiniMessage-like source format.
-# Built-in placeholders: <[region]>, <[direction]>, <[power]>
-# PAPI placeholders such as %auraskills_xxx% are also supported when PlaceholderAPI is installed.
-format: "<&color[dark_purple]>🌏 <&color[white]><[region]> <&color[gray]>• <&color[dark_purple]>🧭 <&color[white]><[direction]> <&color[gray]>• <&color[dark_purple]>🪓 <&color[white]><[power]> <&color[gray]>ʟᴠ sᴋɪʟʟs"
 
-# Replace this with the AuraSkills PAPI placeholder you want for [power].
-power-placeholder: "%auraskills_power%"
+# ============================================================
+# UPDATE
+# ============================================================
 
-# Refresh interval in ticks. 5 = 4 updates/sec.
+# 20 ticks = 1 detik
+#
+# 5 ticks = 0.25 detik
+
 update-ticks: 5
 
-# Position of the text overlay. ACTION_BAR is the reliable text-only HUD position.
-position: ACTION_BAR
+
+# ============================================================
+# GLOBAL ENABLE
+# ============================================================
+
+# true  = bar aktif
+# false = bar mati
+#
+# Bisa diubah dengan:
+#
+# /ccb on
+# /ccb off
+
+enabled: true
+
+
+# ============================================================
+# WORLD
+# ============================================================
+
+# World yang boleh menampilkan bar.
+#
+# /ccb on
+# akan membuat bar aktif di SEMUA world.
+#
+# /ccb off
+# akan mematikan bar di SEMUA world.
+#
+# Kalau enabled true, daftar ini digunakan
+# sebagai nama region yang ditampilkan.
+
+worlds:
+
+  world: "Elyndor"
+
+  world_nether: "Syern"
+
+  # world_the_end: "Aether"
+
+
+# ============================================================
+# FORMAT
+# ============================================================
+
+# Format bebas.
+#
+# Placeholder internal:
+#
+# <[hp]>
+# <[max_hp]>
+# <[mana]>
+# <[max_mana]>
+# <[power]>
+# <[region]>
+# <[direction]>
+#
+# PlaceholderAPI juga bisa digunakan:
+#
+# %player_name%
+# %auraskills_mana%
+# dll.
+
+format: "<&color[dark_red]>❤ <&color[white]><[hp]> <&color[gray]>• <&color[dark_purple]>🌏 <&color[white]><[region]> <&color[gray]>• <&color[dark_purple]>🧭 <&color[white]><[direction]> <&color[gray]>• <&color[dark_purple]>🪓 <&color[white]><[power]> <&color[gray]>ʟᴠ sᴋɪʟʟs <&color[dark_blue]>💙 <&color[white]><[mana]>"
+
+
+# ============================================================
+# HP
+# ============================================================
+
+hp:
+
+  enabled: true
+
+  decimals: 0
+
+  show-max: false
+
+  separator: "/"
+
+
+# ============================================================
+# AURASKILLS
+# ============================================================
+
+auraskills:
+
+  enabled: true
+
+  # PlaceholderAPI AuraSkills.
+  #
+  # Kalau placeholder di server lu berbeda,
+  # tinggal ganti di sini.
+
+  mana-placeholder: "%auraskills_mana%"
+
+  max-mana-placeholder: "%auraskills_max_mana%"
+
+  power-placeholder: "%auraskills_power%"
+
+
+# ============================================================
+# PLACEHOLDERAPI
+# ============================================================
+
+placeholderapi:
+
+  enabled: true
+
+
+# ============================================================
+# DIRECTION
+# ============================================================
+
+direction:
+
+  NORTH: "North"
+
+  EAST: "East"
+
+  SOUTH: "South"
+
+  WEST: "West"
+
+
+# ============================================================
+# UNLISTED WORLD
+# ============================================================
+
+# false:
+# World yang tidak ada di daftar worlds tidak menampilkan bar.
+#
+# true:
+# Tetap menampilkan bar dan nama world digunakan
+# sebagai <[region]>.
+
+show-in-unlisted-worlds: false
+
+
+# ============================================================
+# DEBUG
+# ============================================================
+
+debug:
+
+  enabled: false
