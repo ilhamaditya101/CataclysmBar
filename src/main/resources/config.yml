@@ -1,7 +1,7 @@
 # World -> region name shown in the text overlay.
 worlds:
   world: "Elyndor"
-  world_nether: "Syern"
+# example_world: "name"
 
 # Use your exact MiniMessage-like source format.
 # Built-in placeholders: <[region]>, <[direction]>, <[power]>
