@@ -1,0 +1,14 @@
+name: ElyndorFakeBar
+version: 1.0.0
+main: me.elyndor.fakebar.ElyndorFakeBar
+api-version: '1.20'
+author: Elyndor
+softdepend: [PlaceholderAPI]
+commands:
+  fakebar:
+    description: Reload ElyndorFakeBar
+    usage: /fakebar reload
+    permission: elyndorfakebar.admin
+permissions:
+  elyndorfakebar.admin:
+    default: op

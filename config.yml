@@ -1,0 +1,18 @@
+# World -> region name shown in the text overlay.
+worlds:
+  world: "Elyndor"
+  world_nether: "Syern"
+
+# Use your exact MiniMessage-like source format.
+# Built-in placeholders: <[region]>, <[direction]>, <[power]>
+# PAPI placeholders such as %auraskills_xxx% are also supported when PlaceholderAPI is installed.
+format: "<&color[dark_purple]>🌏 <&color[white]><[region]> <&color[gray]>• <&color[dark_purple]>🧭 <&color[white]><[direction]> <&color[gray]>• <&color[dark_purple]>🪓 <&color[white]><[power]> <&color[gray]>ʟᴠ sᴋɪʟʟs"
+
+# Replace this with the AuraSkills PAPI placeholder you want for [power].
+power-placeholder: "%auraskills_power%"
+
+# Refresh interval in ticks. 5 = 4 updates/sec.
+update-ticks: 5
+
+# Position of the text overlay. ACTION_BAR is the reliable text-only HUD position.
+position: ACTION_BAR
